@@ -4,12 +4,12 @@ This **project** is created within the domain of college basketball scouting. Th
 
 The *composite* attributes are the following:
   
-  **person.name**
+  **person.name** –>
     *first_name*
     *last_name*
     *nickname*
     
-  **statistics.statline**
+  **statistics.statline** –>
     *PPG* -- the average points scored per game
     *APG* -- the average assists given per game
     *RPG* -- the average rebounds collected per game
@@ -17,7 +17,7 @@ The *composite* attributes are the following:
     *THREEpct* -- the average efficiency of all 3-point shots taken
     *FTpct* -- the conversion rate of free throw attempts
     
-  **teams.location**
+  **teams.location** –>
     *city*
     *state*
     *country*
