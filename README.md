@@ -76,6 +76,13 @@ _For each of these functional dependencies, none end up being non-trivial, and e
 ***
 
 _Viewing each player, and their information_
+~~~~sql
+select p.first_name, p.last_name, g.date_of_birth, c.email, n.phone_number
+from person p 
+join general g on g.date_of_birth = p.date_of_birth
+join contact c on c.ID = p.ID
+join numbers n on n.contact_id = c.ID;
+~~~~
 | first_name | last_name | date_of_birth | email                      | phone_number   |
 |------------|-----------|---------------|----------------------------|----------------|
 | Omar       | Said      | 2004-09-11    | osaid@gmail.com            | (905) 557-1234 |
@@ -90,6 +97,13 @@ _Viewing each player, and their information_
 
 
 _Viewing players with their statlines, team info, if they're a postgraduate_
+~~~~sql
+select p.first_name, p.last_name, t.team_name, t.coach_name, s.PPG, s.APG, s.RPG, s.field_goal_pct, s.three_point_pct, e.is_postgraduate
+from person p 
+join statistics s on p.ID = s.ID
+join teams t on t.team_name = p.team_name
+join eligibility e on e.grad_year = p.grad_year and p.gpa = e.gpa;
+~~~~
 | first_name | last_name | team_name                       | coach_name         | PPG  | APG  | RPG  | field_goal_pct | three_point_pct | is_postgraduate |
 |------------|-----------|---------------------------------|--------------------|------|------|------|----------------|-----------------|-----------------|
 | Evan       | Johnson   | Lakeview High School            | Torii Weatherspoon | 35.4 | 13.3 | 7.8  | 46.4           | 43.3            | no              |
@@ -104,6 +118,12 @@ _Viewing players with their statlines, team info, if they're a postgraduate_
 
 
 _Connecting players to socials regardless if they have them or not_
+~~~~sql
+select *
+from person p 
+natural join contact c
+left outer join socials s on s.social_media_id = c.social_media_id;
+~~~~
 | ID | first_name | last_name | position       | date_of_birth | grad_year | gpa | team_name                       | social_media_id | email                      | social_media_id | Snapchat      | Instagram  | Twitter       |
 |----|------------|-----------|----------------|---------------|-----------|-----|---------------------------------|-----------------|----------------------------|-----------------|---------------|------------|---------------|
 | 10 | Omar       | Said      | Shooting Guard | 2004-09-11    | 2023      | 3.2 | Unity Academy                   | 1               | osaid@gmail.com            | 1               | @EJEJ27       | NULL       | NULL          |
@@ -118,12 +138,27 @@ _Connecting players to socials regardless if they have them or not_
 
 
 _Aggregating all the recruit points_
+~~~~sql
+select sum(PPG) as 'All Recruit Points Scored'
+from statistics;
+~~~~
 | All Recruit Points Scored |
 |---------------------------|
 | 250.7                     |
 
 
 _Showing the teams who have someone with at least a 3.6 gpa_
+~~~~sql
+select distinct p.team_name
+from person p
+join eligibility e on e.grad_year = p.grad_year and e.gpa = p.gpa
+where (e.grad_year, e.gpa) in (
+  select grad_year, max(gpa)
+  from eligibility
+  group by grad_year
+  having gpa > 3.6
+);
+~~~~
 | team_name                       |
 |---------------------------------|
 | Liberty High School             |
@@ -131,6 +166,16 @@ _Showing the teams who have someone with at least a 3.6 gpa_
 
 
 _Giving the teams who don't have a point guard, or shooting guard in the database_
+~~~~sql
+SELECT team_name
+FROM teams
+WHERE NOT EXISTS (
+    SELECT *
+    FROM person
+    WHERE person.team_name = teams.team_name
+      AND person.position like '%Guard%'
+);
+~~~~
 | team_name                       |
 |---------------------------------|
 | East High School                |
@@ -141,6 +186,16 @@ _Giving the teams who don't have a point guard, or shooting guard in the databas
 
 
 _Shows the teams that don't have a player in the database born after 2005_
+~~~~sql
+select team_name, count(*) as 'Players'
+from person
+where date_of_birth between '2004-01-01' AND '2005-12-31'
+  and team_name in (
+    select team_name
+    from teams
+  )
+group by team_name;
+~~~~
 | team_name           |
 |---------------------|
 | Central College     |
