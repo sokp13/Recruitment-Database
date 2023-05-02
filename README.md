@@ -50,16 +50,25 @@ The entity representing where the player's contact information can be found. Pho
 ***
 (primary keys are **bold**)
 
-*person(**ID**, first_name, last_name, position, date_of_birth, grad_year, gpa, team_name)   
+person(**ID**, first_name, last_name, position, date_of_birth, grad_year, gpa, team_name)   
+
 general(**date_of_birth**, hometown, nationality) 
+
 body(**ID**, height_in, weight_lbs, wingspan_in, vertical_leap_in) 
+
 statistics(**ID**, ppg, rpg, apg, bpg, spg, field_goal_pct, three_point_pct, free_throw_pct) 
+
 contact(**ID**, social_media_id, email) 
+
 numbers(**contact_id**, phone_number) 
+
 teams(**team_name**, coach_name, city, state, country) 
+
 eligibility(**grad_year**, **gpa**, is_postgraduate) 
+
 recruitment(**player_visit_id**, first_name, last_name, school, date_of_visit, official, offered) 
-socials(**social_media_id**, Snapchat, Instagram, Twitter)*
+
+socials(**social_media_id**, Snapchat, Instagram, Twitter)
 
 For each of these functional dependencies, none end up being non-trivial, and each primary key uniquely identifies tuples within each relation.
 
