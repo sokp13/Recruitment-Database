@@ -70,7 +70,7 @@ recruitment(**player_visit_id**, first_name, last_name, school, date_of_visit, o
 
 socials(**social_media_id**, Snapchat, Instagram, Twitter)
 
-For each of these functional dependencies, none end up being non-trivial, and each primary key uniquely identifies tuples within each relation.
+_For each of these functional dependencies, none end up being non-trivial, and each primary key uniquely identifies tuples within each relation._
 
 **Transaction and Query Executions**
 ***
