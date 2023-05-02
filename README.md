@@ -72,12 +72,13 @@ socials(**social_media_id**, Snapchat, Instagram, Twitter)
 _For each of these functional dependencies, none end up being non-trivial, and each primary key uniquely identifies tuples within each relation._
 
 ***
-**Transaction and Query Executions**
+##Transaction and Query Executions
 ***
 
-Viewing each player, and their body measurements, and their information
+_Viewing each player, and their information_
+![](assets/images/
 
-Viewing players with their statlines, team info, if they're a postgraduate
+_Viewing players with their statlines, team info, if they're a postgraduate_
 
 Connecting players to socials regardless if they have them or not
 
