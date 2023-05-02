@@ -76,16 +76,76 @@ _For each of these functional dependencies, none end up being non-trivial, and e
 ***
 
 _Viewing each player, and their information_
+| first_name | last_name | date_of_birth | email                      | phone_number   |
+|------------|-----------|---------------|----------------------------|----------------|
+| Omar       | Said      | 2004-09-11    | osaid@gmail.com            | (905) 557-1234 |
+| Martin     | Silva     | 2007-01-28    | sillysilva@gmail.com       | (248) 325-5678 |
+| Leslie     | Garcia    | 2008-02-15    | leslieIsABoyname@gmail.com | (319) 555-1234 |
+| Amadou     | Diallo    | 2004-11-12    | naija1960@outlook.com      | (978) 190-6789 |
+| Aidan      | Kone      | 2006-05-03    | kone_aidan323@yahoo.com    | (773) 555-3456 |
+| Liam       | Smith     | 2005-04-10    | d33pthree0@gmail.com       | (306) 441-4321 |
+| Tomas      | Müller    | 2006-06-30    | tomasRellum@yahoo.com      | (306) 555-9876 |
+| Evan       | Johnson   | 2007-08-21    | backcourtEJ@gmail.com      | (312) 829-5678 |
+| Tariq      | Niang     | 2006-12-05    | tariqnn@outlook.com        | (843) 555-8765 |
+
 
 _Viewing players with their statlines, team info, if they're a postgraduate_
+| first_name | last_name | team_name                       | coach_name         | PPG  | APG  | RPG  | field_goal_pct | three_point_pct | is_postgraduate |
+|------------|-----------|---------------------------------|--------------------|------|------|------|----------------|-----------------|-----------------|
+| Evan       | Johnson   | Lakeview High School            | Torii Weatherspoon | 35.4 | 13.3 | 7.8  | 46.4           | 43.3            | no              |
+| Liam       | Smith     | Central College                 | Benjamin Kim       | 21.5 | 5.2  | 18.6 | 65.4           | 40.7            | no              |
+| Tariq      | Niang     | East High School                | Kevin Griese       | 27.3 | 5.2  | 8.9  | 51.9           | 38.2            | no              |
+| Leslie     | Garcia    | North High School               | Geno Davis         | 25.8 | 4.3  | 12.1 | 55.7           | 32.3            | no              |
+| Tomas      | Müller    | Central College                 | Benjamin Kim       | 24.5 | 8.7  | 5.3  | 49.8           | 42.5            | no              |
+| Amadou     | Diallo    | Reed Academy                    | Daniel Lee         | 17.2 | 7.1  | 8.9  | 50.1           | 27.6            | yes             |
+| Kofi       | Appiah    | Liberty High School             | Matthew Wong       | 22.3 | 2.5  | 13.3 | 75.7           | 27.9            | no              |
+| Martin     | Silva     | Freedom High School             | William Davis      | 28.6 | 6.4  | 7.8  | 51             | 39.4            | no              |
+| Aidan      | Kone      | Hope Science Preparatory School | Andrew Johnson     | 27.8 | 6.2  | 4.9  | 51.3           | 46.7            | no              |
 
-Connecting players to socials regardless if they have them or not
 
-Aggregating all the recruit points
+_Connecting players to socials regardless if they have them or not_
+| ID | first_name | last_name | position       | date_of_birth | grad_year | gpa | team_name                       | social_media_id | email                      | social_media_id | Snapchat      | Instagram  | Twitter       |
+|----|------------|-----------|----------------|---------------|-----------|-----|---------------------------------|-----------------|----------------------------|-----------------|---------------|------------|---------------|
+| 10 | Omar       | Said      | Shooting Guard | 2004-09-11    | 2023      | 3.2 | Unity Academy                   | 1               | osaid@gmail.com            | 1               | @EJEJ27       | NULL       | NULL          |
+| 8  | Martin     | Silva     | Small Forward  | 2007-01-28    | 2025      | 2   | Freedom High School             | 2               | sillysilva@gmail.com       | 2               | @generic_liam | smittyliam | @generic_liam |
+| 4  | Leslie     | Garcia    | Power Forward  | 2008-02-15    | 2026      | 2.7 | North High School               | 3               | leslieIsABoyname@gmail.com | 3               | @tarryK       | NULL       | NULL          |
+| 6  | Amadou     | Diallo    | Point Guard    | 2004-11-12    | 2023      | 3.4 | Reed Academy                    | 4               | naija1960@outlook.com      | 4               | @lezzie       | NULL       | @lezzie1      |
+| 9  | Aidan      | Kone      | Power Forward  | 2006-05-03    | 2024      | 3.9 | Hope Science Preparatory School | 5               | kone_aidan323@yahoo.com    | NULL            | NULL          | NULL       | NULL          |
+| 2  | Liam       | Smith     | Center         | 2005-04-10    | 2023      | 2.6 | Central College                 | 6               | d33pthree0@gmail.com       | 6               | @madyDiallo   | amadouuu   | NULL          |
+| 5  | Tomas      | Müller    | Shooting Guard | 2006-06-30    | 2024      | 3.8 | Central College                 | 7               | tomasRellum@yahoo.com      | 7               | @kofiah       | NULL       | @appiahkofee  |
+| 1  | Evan       | Johnson   | Point Guard    | 2007-08-21    | 2025      | 3.5 | Lakeview High School            | 8               | backcourtEJ@gmail.com      | 8               | @martySilver  | silvermrty | @martosaliva  |
+| 3  | Tariq      | Niang     | Small Forward  | 2006-12-05    | 2024      | 3.6 | East High School                | 9               | tariqnn@outlook.com        | NULL            | NULL          | NULL       | NULL          |
 
-Showing the teams how have someone with at least a 3.6 gpa
 
-Giving the teams who don't have a point guard, or shooting guard in the database
+_Aggregating all the recruit points_
+| All Recruit Points Scored |
+|---------------------------|
+| 250.7                     |
 
-Shows the teams that don't have a player in the database born after 2005
+
+_Showing the teams who have someone with at least a 3.6 gpa_
+| team_name                       |
+|---------------------------------|
+| Liberty High School             |
+| Hope Science Preparatory School |
+
+
+_Giving the teams who don't have a point guard, or shooting guard in the database_
+| team_name                       |
+|---------------------------------|
+| East High School                |
+| Freedom High School             |
+| Hope Science Preparatory School |
+| Liberty High School             |
+| North High School               |
+
+
+_Shows the teams that don't have a player in the database born after 2005_
+| team_name           |
+|---------------------|
+| Central College     |
+| Liberty High School |
+| Reed Academy        |
+| Unity Academy       |
+
 
