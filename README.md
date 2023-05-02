@@ -45,7 +45,7 @@ The entity representing where the player's contact information can be found. Pho
 
 
 ***
-**Relation Schema** in Parenthetical Form
+**Relation Schema**
 ***
 (primary keys are **bold**)
 
@@ -72,11 +72,10 @@ socials(**social_media_id**, Snapchat, Instagram, Twitter)
 _For each of these functional dependencies, none end up being non-trivial, and each primary key uniquely identifies tuples within each relation._
 
 ***
-##Transaction and Query Executions
+**Transaction and Query Executions**
 ***
 
 _Viewing each player, and their information_
-![](assets/images/
 
 _Viewing players with their statlines, team info, if they're a postgraduate_
 
