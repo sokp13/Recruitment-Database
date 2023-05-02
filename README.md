@@ -18,16 +18,11 @@ The representation of the teams which these players played for. This contains th
 *Statistics*
 The representation of the player's statline from while playing in high school. Note: the statstics can be abbreviated.
 
-PPG
-- Points per game
-APG
-- Assists per game
-RPG
-- Rebounds per game
-BPG
-- Blocks per game
-SPG
-- Steals per game
+- Points per game : PPG
+- Assists per game : APG
+- Rebounds per game : RPG
+- Blocks per game : BPG
+- Steals per game : SPG
 
 *Recruitment*
 The representation of colleges offering scholarships and campus visits to certain players. This contains the player name, offering school, and if an offer is extended.
