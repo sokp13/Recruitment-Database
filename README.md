@@ -53,7 +53,7 @@ person(**ID**, first_name, last_name, position, date_of_birth, grad_year, gpa, t
 
 general(**date_of_birth**, hometown, nationality) 
 
-body(**ID**, height_in, weight_lbs, wingspan_in, vertical_leap_in) 
+body(**ID**, height, weight, wingspan, vertical_leap) 
 
 statistics(**ID**, ppg, rpg, apg, bpg, spg, field_goal_pct, three_point_pct, free_throw_pct) 
 
