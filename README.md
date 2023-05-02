@@ -74,3 +74,18 @@ _For each of these functional dependencies, none end up being non-trivial, and e
 ***
 **Transaction and Query Executions**
 ***
+
+Viewing each player, and their body measurements, and their information
+
+Viewing players with their statlines, team info, if they're a postgraduate
+
+Connecting players to socials regardless if they have them or not
+
+Aggregating all the recruit points
+
+Showing the teams how have someone with at least a 3.6 gpa
+
+Giving the teams who don't have a point guard, or shooting guard in the database
+
+Shows the teams that don't have a player in the database born after 2005
+
