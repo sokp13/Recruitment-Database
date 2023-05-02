@@ -43,7 +43,7 @@ The entity representing where the player's contact information can be found. Pho
 
 **E-R Diagram**
 ***
-![[diagram.png]]
+![](diagram.png)
 
 
 **Relation Schema** in Parenthetical Form
