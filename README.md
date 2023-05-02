@@ -9,16 +9,15 @@ This database is designed to store and manage information related to the recruit
 ***
 **Entities and Relationships**
 ***
-_Each of these entities will be assigned an easily-trackable identifier, to make accession simpler.
-_
+
 _Person_
-The representation of the high-school recruit. This entity contains the name, and position of each player, among additional information. 
+- The representation of the high-school recruit. This entity contains the name, and position of each player, among additional information. 
 
 _Teams_
-The representation of the teams which these players played for. This contains the name, location, and coach of each team.
+- The representation of the teams which these players played for. This contains the name, location, and coach of each team.
 
 _Statistics_
-The representation of the player's statline from while playing in high school. Note: the statstics can be abbreviated.
+- The representation of the player's statline from while playing in high school. Note: the statstics can be abbreviated.
 
 - Points per game : PPG
 - Assists per game : APG
@@ -27,16 +26,20 @@ The representation of the player's statline from while playing in high school. N
 - Steals per game : SPG
 
 _Recruitment_
-The representation of colleges offering scholarships and campus visits to certain players. This contains the player name, offering school, and if an offer is extended.
+- The representation of colleges offering scholarships and campus visits to certain players. This contains the player name, offering school, and if an offer is extended.
 
 _Eligibility_
-The entity that withholds information regarding a players graduation year, gpa, and post-graduate status.
+- The entity that withholds information regarding a players graduation year, gpa, and post-graduate status.
 
 _Body_
-The entity that stores unique player physical makeups concerning height, weight, wingspan, and vertical jump. Height, wingspan, and vertical is measured in inches, and weight in pounds.
+- The entity that stores unique player physical makeups concerning height, weight, wingspan, and vertical jump. Height, wingspan, and vertical is measured in inches, and weight in pounds.
 
 _Contact_
-The entity representing where the player's contact information can be found. Phone numbers, emails, and social media handles are stored here.
+- The entity representing where the player's contact information can be found. Phone numbers, emails, and social media handles are stored here.
+
+
+_Each of these entities will be assigned an easily-trackable identifier, to make accession simpler._
+
 
 ***
 **E-R Diagram**
